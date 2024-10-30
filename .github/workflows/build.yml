@@ -35,7 +35,7 @@ jobs:
     with:
       containerfile: Dockerfile-alpine
       # Convert to lowercase with ${VAR,,}
-      image: "${{ github.repository,, }}"
+      image: "gitarplayer/sftp"
       tag: alpine
       update-check: "apk update >/dev/null && apk list --upgradable"
     secrets: inherit
@@ -45,7 +45,7 @@ jobs:
     uses: ./.github/workflows/build-image.yml
     with:
       containerfile: Dockerfile
-      image: "${{ github.repository,, }}"  # Lowercase conversion
+      image: "${{ gitarplayer/sftp }}"  # Lowercase conversion
       tag: debian
       update-check: "apt-get update >/dev/null && apt-get upgrade -s | grep '^Inst' || true"
     secrets: inherit
