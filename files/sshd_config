@@ -19,3 +19,5 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 
 # Enable this for more logs
 LogLevel VERBOSE
+
+UsePrivilegeSeparation no
