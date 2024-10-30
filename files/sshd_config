@@ -9,12 +9,12 @@ HostKey /etc/ssh/ssh_host_rsa_key
 UseDNS no
 
 # Limited access
-PermitRootLogin no
+PermitRootLogin yes
 X11Forwarding no
 AllowTcpForwarding no
 
-# Force sftp and chroot jail
-Subsystem sftp internal-sftp
+# Force sftp 
+Subsystem sftp /usr/lib/openssh/sftp-server
 
 
 # Enable this for more logs
