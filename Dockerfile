@@ -15,6 +15,8 @@ RUN apt-get update && \
 COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint /
+RUN chgrp -R 0 /etc/sftp /var/run /usr/loca/bin /etc/sftp.d && \
+    chmod -R 770 /etc/sftp /var/run /usr/loca/bin /etc/sftp.d
 
 EXPOSE 22
 
