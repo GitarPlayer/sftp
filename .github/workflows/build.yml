@@ -45,7 +45,7 @@ jobs:
     uses: ./.github/workflows/build-image.yml
     with:
       containerfile: Dockerfile
-      image: "${{ gitarplayer/sftp }}"  # Lowercase conversion
+      image: "gitarplayer/sftp"  # Lowercase conversion
       tag: debian
       update-check: "apt-get update >/dev/null && apt-get upgrade -s | grep '^Inst' || true"
     secrets: inherit
